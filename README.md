@@ -217,10 +217,5 @@ https://www.loom.com/share/fe89b2662bf241238f13ea6d71d4b6d7
 
 Built for the **Lyzr Builder Challenge** using [GitAgent](https://github.com/open-gitagent/gitagent).
 
-See [SUBMISSION.md](./SUBMISSION.md) for form answers.
 
 ---
-
-## License
-
-MIT
