@@ -195,10 +195,7 @@ Orchestration is implemented in `backend/app/workflows/full_analysis.py` and def
 ---
 
 ## Demo
-
-See [DEMO_SCRIPT.md](./DEMO_SCRIPT.md) for a 3–5 minute recruiter walkthrough.
-
-**Quick demo repo:** `https://github.com/tiangolo/typer` (lightweight; clones in seconds)
+https://www.loom.com/share/fe89b2662bf241238f13ea6d71d4b6d7
 
 ---
 
