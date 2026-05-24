@@ -1,0 +1,21 @@
+spec_version: "0.1.0"
+name: orchestrator
+version: 1.0.0
+description: Coordinates multi-agent repository analysis workflows
+
+model:
+  preferred: "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+tools: [read, memory]
+
+runtime:
+  max_turns: 15
+
+delegation:
+  mode: explicit
+
+compliance:
+  risk_level: low

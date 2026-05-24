@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "id": "1762489b-63a5-4b7a-925f-29734e36ec1d",
+      "objective": "Analyze the architecture of the FastAPI repository.",
+      "steps": [],
+      "attempts": 1,
+      "status": "active",
+      "started_at": "2026-05-23T17:33:01.368Z"
+    },
+    {
+      "id": "20977b4c-7c9e-4970-b2ed-97cdadebb734",
+      "objective": "Analyze the architecture of the Code-Sage-AI repository.",
+      "steps": [],
+      "attempts": 1,
+      "status": "active",
+      "started_at": "2026-05-23T17:46:38.192Z"
+    },
+    {
+      "id": "f4eb0581-9712-419c-bb1d-f531deb3b0f7",
+      "objective": "Analyze repository architecture for Typer.",
+      "steps": [],
+      "attempts": 1,
+      "status": "active",
+      "started_at": "2026-05-24T08:58:26.847Z"
+    },
+    {
+      "id": "65c99006-ccc9-40dd-8626-a08f1de6b482",
+      "objective": "Analyze the architecture of the Typer repository.",
+      "steps": [],
+      "attempts": 1,
+      "status": "active",
+      "started_at": "2026-05-24T10:09:46.308Z"
+    }
+  ]
+}

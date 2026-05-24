@@ -1,0 +1,18 @@
+spec_version: "0.1.0"
+name: bug-hunter
+version: 1.0.0
+description: Finds suspicious code patterns, logic bugs, and error handling gaps
+
+model:
+  preferred: "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.2
+    max_tokens: 8192
+
+tools: [read, cli]
+
+runtime:
+  max_turns: 25
+
+compliance:
+  risk_level: medium

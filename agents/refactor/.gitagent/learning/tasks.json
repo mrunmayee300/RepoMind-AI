@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "id": "19e955ea-2cb1-4767-9a64-a001affc83f5",
+      "objective": "Identify refactoring opportunities for the Code-Sage-AI repository based on architecture, bugs, and security findings.",
+      "steps": [],
+      "attempts": 1,
+      "status": "active",
+      "started_at": "2026-05-23T17:47:43.201Z"
+    }
+  ]
+}

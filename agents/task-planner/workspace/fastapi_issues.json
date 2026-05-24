@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Unhandled Exceptions in Async Functions",
+        "labels": ["bug", "critical"],
+        "priority": "P0",
+        "estimate": "2d",
+        "description": "Async functions can sometimes propagate unhandled exceptions back to the event loop, leading to crashes. Wrap asynchronous code in try-except blocks to catch and log exceptions.",
+        "files": ["fastapi/applications.py"]
+    },
+    {
+        "title": "Race Conditions in Background Tasks",
+        "labels": ["bug", "critical"],
+        "priority": "P1",
+        "estimate": "2d",
+        "description": "Race conditions can occur when multiple requests modify shared data. Use asyncio synchronization primitives to coordinate access to shared data.",
+        "files": ["fastapi/routing.py"]
+    },
+    {
+        "title": "Risk of Null Reference in Security Models",
+        "labels": ["bug", "warning"],
+        "priority": "P2",
+        "estimate": "1d",
+        "description": "Security models might not perform null checks on credentials or tokens. Ensure all parameters are validated and not null before use.",
+        "files": ["fastapi/security/"]
+    },
+    {
+        "title": "Potential Resource Leaks in Applications",
+        "labels": ["bug", "warning"],
+        "priority": "P2",
+        "estimate": "1d",
+        "description": "Resources like database connections could be left open if not properly managed. Utilize context managers for resource management.",
+        "files": ["fastapi/applications.py"]
+    },
+    {
+        "title": "Refactor Complexity in Routing Logic",
+        "labels": ["refactor", "info"],
+        "priority": "P3",
+        "estimate": "2d",
+        "description": "The routing files are extensive and may contain convoluted logic. Refactor to simplify routing logic and split large functions into smaller units.",
+        "files": ["fastapi/routing.py"]
+    },
+    {
+        "title": "Add Missing Type Annotations",
+        "labels": ["refactor", "info"],
+        "priority": "P3",
+        "estimate": "1d",
+        "description": "Lack of type hints can lead to type mismatch errors. Add type hints to all function signatures for clarity.",
+        "files": ["fastapi/param_functions.py"]
+    }
+]

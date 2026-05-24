@@ -1,0 +1,52 @@
+name: full-repository-analysis
+description: Complete multi-agent repository intelligence pipeline
+version: 1.0.0
+
+steps:
+  - agent: architect
+    prompt: |
+      Analyze this repository's architecture. Produce:
+      - System overview
+      - Module boundaries
+      - Data flow
+      - Framework stack
+      - Complexity hotspots
+    output_key: architecture
+
+  - agent: bug-hunter
+    prompt: |
+      Scan for bugs and suspicious patterns using the architecture context.
+      Focus on error handling, race conditions, null checks, and anti-patterns.
+    input_from: architecture
+    output_key: bugs
+
+  - agent: security
+    prompt: |
+      Perform security audit. Check for hardcoded secrets, unsafe patterns,
+      auth weaknesses, and dependency risks.
+    input_from: [architecture, bugs]
+    output_key: security
+
+  - agent: refactor
+    prompt: |
+      Suggest refactoring opportunities informed by architecture, bugs, and security findings.
+    input_from: [architecture, bugs, security]
+    output_key: refactor
+
+  - agent: documentation
+    prompt: |
+      Generate onboarding guide and improved README sections based on full analysis.
+    input_from: [architecture, security, refactor]
+    output_key: documentation
+
+  - agent: task-planner
+    prompt: |
+      Create prioritized GitHub issues/tasks from all agent findings.
+    input_from: [bugs, security, refactor]
+    output_key: tasks
+
+  - agent: pr-review
+    prompt: |
+      Provide PR review guidelines and code review checklist for this repo.
+    input_from: architecture
+    output_key: pr_guidelines

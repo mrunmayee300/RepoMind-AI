@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Build
+.next/
+dist/
+build/
+*.egg-info/
+
+# Data
+data/repos/
+data/vectorstores/
+data/analyses/
+*.faiss
+*.pkl
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+DEMO_SCRIPT.md
+SUBMISSION.md
+SUBMISSION_PACKAGE.md
+RESUME_BULLETS.md

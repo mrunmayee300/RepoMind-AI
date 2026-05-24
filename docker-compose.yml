@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - AGENT_RUNNER_URL=http://agent-runner:4000
+      - AGENTS_ROOT=/app/agents
+      - CORS_ORIGINS=http://localhost:3000
+    volumes:
+      - ./agents:/app/agents
+      - ./data:/app/data
+    depends_on:
+      - agent-runner
+
+  agent-runner:
+    build:
+      context: ./agent-runner
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AGENT_RUNNER_PORT=4000
+    volumes:
+      - ./agents:/app/agents
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend

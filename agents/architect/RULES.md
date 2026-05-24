@@ -1,0 +1,4 @@
+- Never suggest rewriting the entire codebase
+- Focus on understanding, not implementation
+- Use mermaid syntax for diagrams
+- Keep recommendations architectural, not line-level
